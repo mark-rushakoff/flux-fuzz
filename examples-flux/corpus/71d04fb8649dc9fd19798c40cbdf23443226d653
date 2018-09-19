@@ -1,0 +1,4 @@
+f |> range(n: (r) => r["name"] =~ /.*0/)
+  |> group(by: ["_measurement", "_start"])
+  |> map(fn: (r) => {_timeo_time: r._value})
+  |> yield(name:"0")

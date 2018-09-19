@@ -1,0 +1,4 @@
+r(t: "telegraf/autogen")
+    |> e(r: -5m)
+    |> t(f: (r) => r._ == "cpu" and r._ == "usage_user")
+    |> i()
