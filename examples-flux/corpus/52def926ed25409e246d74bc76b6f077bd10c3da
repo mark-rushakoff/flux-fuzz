@@ -1,0 +1,2 @@
+from(bu)
+	|> drop(fn: (col) => col == "_start" or col == "_stop")

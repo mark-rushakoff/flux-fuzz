@@ -24,14 +24,50 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:8b8bf32714672416808ee27dd357bba27644f0a05ec718cd8460acf35e4c13c8"
+  digest = "1:174ca996efe56fbba6d8874b4f91a109b35d962d6d16b505470250a01720c663"
   name = "github.com/influxdata/flux"
   packages = [
+    ".",
     "ast",
+    "interpreter",
+    "iocounter",
     "parser",
+    "semantic",
+    "values",
   ]
   pruneopts = "UT"
-  revision = "272ec9cad23d26d93339feca224ee1f9a29a21c4"
+  revision = "1335e4da35f656455ff6b3409fb1ee26d06463b3"
+
+[[projects]]
+  digest = "1:d4d60a22dc6c84bf1f8d2991cddcb98fb25f433f8a856fb6888fc21885998a13"
+  name = "github.com/mna/pigeon"
+  packages = [
+    ".",
+    "ast",
+    "builder",
+  ]
+  pruneopts = "UT"
+  revision = "9df264905d4734c0133161d8c67828ff522b154a"
+  version = "v1.0.0"
+
+[[projects]]
+  digest = "1:9d7b1f07e44cada28e6160cb0a808ad2f71f32bd7114793fb0baa302db0e6229"
+  name = "github.com/opentracing/opentracing-go"
+  packages = [
+    ".",
+    "log",
+  ]
+  pruneopts = "UT"
+  revision = "1949ddbfd147afd4d964a9f00b24eb291e0e7c38"
+  version = "v1.0.2"
+
+[[projects]]
+  digest = "1:40e195917a951a8bf867cd05de2a46aaf1806c50cf92eebf4c16f78cd196f747"
+  name = "github.com/pkg/errors"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
+  version = "v0.8.0"
 
 [[projects]]
   branch = "master"
@@ -41,12 +77,22 @@
   pruneopts = "UT"
   revision = "fe01f9c9e73f38ce4c577d53f4098946646971f2"
 
+[[projects]]
+  branch = "master"
+  digest = "1:76ee51c3f468493aff39dbacc401e8831fbb765104cbf613b89bef01cf4bad70"
+  name = "golang.org/x/net"
+  packages = ["context"]
+  pruneopts = "UT"
+  revision = "26e67e76b6c3f6ce91f7c52def5af501b4e0f3a2"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
     "github.com/dvyukov/go-fuzz/go-fuzz",
     "github.com/dvyukov/go-fuzz/go-fuzz-build",
+    "github.com/influxdata/flux",
+    "github.com/influxdata/flux/ast",
     "github.com/influxdata/flux/parser",
   ]
   solver-name = "gps-cdcl"
