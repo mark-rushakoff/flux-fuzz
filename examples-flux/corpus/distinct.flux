@@ -1,4 +1,4 @@
-from(bucket: "telegraf/autogen")
-	|> range(start: -5m)
-	|> filter(fn: (r) => r._measurement == "cpu")
-	|> distinct(column: "host")
+from(bucket:"testdb")
+  |> range(start: 2018-05-20T19:53:26Z)
+  |> distinct(column:"_value")
+  |> yield(name:"0")

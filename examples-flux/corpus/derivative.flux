@@ -1,4 +1,3 @@
-from(bucket: "telegraf/autogen")
-    |> range(start: -5m)
-    |> filter(fn: (r) => r._measurement == "disk" and r._field == "used_percent")
-    |> derivative(nonNegative: true, columns: ["used_percent"])
+from(bucket:"testdb")
+  |> range(start: 2018-05-23T13:09:22.885021542Z)
+  |> derivative(unit:100ms)

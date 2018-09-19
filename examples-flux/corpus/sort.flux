@@ -1,5 +1,3 @@
-from(bucket:"telegraf/autogen")
-    |> filter(fn: (r) => r._measurement == "system" AND
-               r._field == "uptime")
-    |> range(start:-12h)
-    |> sort(cols:["region", "host", "value"])
+from(bucket:"testdb")
+  |> range(start: 2018-05-22T19:53:26Z)
+  |> sort(cols:["_value", "_time"])

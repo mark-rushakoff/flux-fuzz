@@ -1,4 +1,3 @@
-from(bucket: "telegraf/autogen")
-	|> range(start:-5m)
-	|> filter(fn: (r) => r._measurement == "cpu")
-	|> duplicate(column: "host", as: "server")
+from(bucket: "test")
+	|> range(start:2018-05-22T19:53:26Z)
+	|> duplicate(column: "host", as: "host_new")

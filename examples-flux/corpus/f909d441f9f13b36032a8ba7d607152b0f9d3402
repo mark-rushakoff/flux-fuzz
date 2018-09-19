@@ -1,0 +1,7 @@
+m(t:"telegraf/autogen")
+|>r(n:()=>"cpu"AND
+"usage_system"AND
+"app-server")
+|>e(t:h)
+// create a new table by copying each row into a new format
+|>p(n:()=>{e:r,r:r})

@@ -1,5 +1,6 @@
-// Determine 99th percentile cpu system usage:
-from(bucket: "telegraf/autogen")
-	|> range(start: -5m)
-	|> filter(fn: (r) => r._measurement == "cpu" and r._field == "usage_system")
-	|> percentile(p: 0.99)
+from(bucket: "test")
+    |> range(start: 2018-05-22T19:50:26Z)
+    |> group(by: ["_measurement", "_start"])
+    |> percentile(percentile:0.75, method:"exact_selector")
+    |> map(fn: (r) => {_time: r._time, percentile: r._value})
+    |> yield(name:"0")

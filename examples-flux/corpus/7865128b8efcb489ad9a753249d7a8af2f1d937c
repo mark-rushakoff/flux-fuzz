@@ -1,0 +1,4 @@
+from(bucket: "")
+    |> range(start: -5m)
+    |> filter(fn: (r) => r._measurement == "" and r._field == "")
+    |> derivative(nonNegative: true, columns: [""])

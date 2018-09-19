@@ -1,0 +1,1 @@
+m(t:"testdb")|>e(t:Z)|>r(n:(r)=>r["name"]=="disk0")|>p(y:["_measurement"])|>p(n:(r)=>{e:r,e:r})|>d(e:"0")

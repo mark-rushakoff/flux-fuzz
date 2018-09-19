@@ -1,0 +1,2 @@
+m(bucket: "telegraf/autogen")
+    |>ange(start: -30)|>p(t:["_time"])
