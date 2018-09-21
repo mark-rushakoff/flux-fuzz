@@ -1,0 +1,1 @@
+from(bucket: "telegraf/autogen") |> range(start: -5m) |> yield(name:"1")
