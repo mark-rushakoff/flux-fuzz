@@ -12,7 +12,7 @@ func Fuzz(data []byte) int {
 	parsedAST, err := parser.NewAST(string(data))
 	if err != nil {
 		// Not interesting.
-		return 0
+		return -1
 	}
 
 	// Parsed successfully. Serialize to JSON.

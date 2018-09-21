@@ -10,7 +10,7 @@ func Fuzz(data []byte) int {
 	ast, err := parser.NewAST(string(data))
 	if err != nil {
 		// Not interesting.
-		return 0
+		return -1
 	}
 
 	c1 := ast.Copy()
