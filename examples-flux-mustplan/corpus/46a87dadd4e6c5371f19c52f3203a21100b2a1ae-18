@@ -1,0 +1,1 @@
+(7|>shift(shift:/^[2%]*4$//shift(shift:3)))

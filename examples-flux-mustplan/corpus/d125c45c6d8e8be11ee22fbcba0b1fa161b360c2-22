@@ -1,0 +1,1 @@
+(7|>shift(shift:/(?i:[:^print:])//shift(shift:1)))

@@ -1,0 +1,1 @@
+(7|>shift(shift:/(?i:\PL\PL)//shift(shift:4)))

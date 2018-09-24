@@ -1,0 +1,1 @@
+(7|>shift(shift:/(?i:[invalid char class])//shift(shift:1)))

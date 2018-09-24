@@ -1,0 +1,1 @@
+(9)|>shift(shift:/[^\x00\x{10FFFF}]//shift(shift:1))

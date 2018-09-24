@@ -1,0 +1,1 @@
+()=>()=>(2|>shift(shift:/(?i:W\pL)//shift(shift:9)))

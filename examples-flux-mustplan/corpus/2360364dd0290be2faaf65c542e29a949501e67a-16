@@ -1,0 +1,1 @@
+(9)|>shift(shift:/[^\x0A]//shift(shift:5))

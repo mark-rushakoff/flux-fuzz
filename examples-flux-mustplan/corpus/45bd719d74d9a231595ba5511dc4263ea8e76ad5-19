@@ -1,0 +1,1 @@
+(9|>shift(shift:/(\|\^\x00\xFF)//shift(shift:9)))
